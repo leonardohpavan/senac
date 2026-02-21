@@ -31,6 +31,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 <body>
 
 <h1>Senac Rio Claro</h1>
+<a href="cadastro.php">Cadastrar Aluno</a>
+
 <h3>Pesquisar Aluno</h3>
 <form method="POST" action="index.php">
     <label>RA</label>
