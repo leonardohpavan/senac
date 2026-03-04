@@ -51,4 +51,16 @@ Class Aluno{
 
     }
 
+    public function excluir(){
+        $sql = "DELETE FROM alunos WHERE ra = :ra";
+        $stmt = $this->bd->prepare($sql);
+        $stmt->bindParam(':ra', $this->ra, PDO::PARAM_INT);
+
+        if($stmt->execute()){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
